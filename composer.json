@@ -1,0 +1,29 @@
+{
+    "name": "machecaz/marlon-lumen",
+    "keywords": [
+        "lumen",
+        "validation",
+        "form-request",
+        "responses",
+        "standard-errors",
+        "microservice"
+    ],
+    "authors": [
+        {
+            "name": "danieletulone",
+            "email": "danieletulone.work@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "laravel/lumen": "8.x.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "Marlon\\Lumen\\": "src/"
+        }
+    }
+}
