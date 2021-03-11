@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\ValidationException;
 use Validator;
 
-class MarlonLumenProvider extends ServiceProvider
+class MarlonLumenServiceProvider extends ServiceProvider
 {
     $this->app->resolving(FormRequest::class, function ($req, $app) {
         $validator = Validator::make(
