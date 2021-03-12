@@ -1,6 +1,6 @@
 # Marlon Lumen
 
-## Usage
+## Usage
 
 1. Register provider into `bootstrap/app.php`:
 
