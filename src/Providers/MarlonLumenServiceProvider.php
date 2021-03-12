@@ -2,14 +2,15 @@
 
 namespace Marlon\Lumen\Providers;
 
+use Marlon\Lumen\Http\FormRequest;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
-use Validator;
 
 class MarlonLumenServiceProvider extends ServiceProvider
 {
     public function register() {
-
+        //
     }
 
     public function boot() {
