@@ -16,7 +16,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.4|^8.0"
+        "php": "^7.4|^8.0",
+        "laravel-lang/lang": "9999999-dev"
     },
     "require-dev": {
         "laravel/lumen": "8.x.x"

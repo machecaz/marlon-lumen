@@ -41,6 +41,6 @@ class MarlonLumenServiceProvider extends ServiceProvider
             $req->replace($validator->validated());
         });
 
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'marlon');
+        $this->loadTranslationsFrom(__DIR__ . '/../vendor/laravel-lang/lang/src', 'marlon');
     }
 }
