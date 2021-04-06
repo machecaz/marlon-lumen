@@ -18,6 +18,7 @@ class MarlonLumenServiceProvider extends ServiceProvider
             $validator = Validator::make(
                 request()->all(),
                 $req->rules(),
+                $req->messages()
             );
     
             if ($validator->fails()) {
@@ -39,5 +40,7 @@ class MarlonLumenServiceProvider extends ServiceProvider
     
             $req->replace($validator->validated());
         });
+
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'marlon');
     }
 }

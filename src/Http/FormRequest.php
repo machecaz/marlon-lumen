@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 abstract class FormRequest extends Request
 {
+    function messages(): array {
+        return [];
+    }
+
     abstract function rules(): array;
 
     public function getPerPage(): int 
