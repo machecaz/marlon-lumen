@@ -1,6 +1,6 @@
 <?php
 
-namespace Marlon\Lumen\Http\Middlewares;
+namespace Marlon\Lumen\Http\Middleware;
 
 use Closure;
 
