@@ -31,7 +31,7 @@ class Auth
      *
      * @return boolean
      */
-    public static function isSuperAdmin(): boolean
+    public static function isSuperAdmin(): bool
     {
         return self::is(RoleEnum::SUPER_ADMIN());
     }
@@ -42,7 +42,7 @@ class Auth
      * @param RoleEnum $role
      * @return boolean
      */
-    public static function is(RoleEnum $role): boolean
+    public static function is(RoleEnum $role): bool
     {
         return self::role() === (string) $role;
     }
@@ -52,7 +52,7 @@ class Auth
      *
      * @return boolean
      */
-    public static function exists(): boolean
+    public static function exists(): bool
     {
         return self::id() !== null;
     }
