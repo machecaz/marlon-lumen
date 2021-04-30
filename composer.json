@@ -17,7 +17,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.4|^8.0",
-        "spatie/laravel-enum": "9999999-dev"
+        "spatie/laravel-enum": "^2.4"
     },
     "require-dev": {
         "laravel/lumen": "8.x.x"
