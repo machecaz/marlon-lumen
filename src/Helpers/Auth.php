@@ -44,7 +44,7 @@ class Auth
      */
     public static function is(RoleEnum $role): boolean
     {
-        return self::role() === string ($role);
+        return self::role() === (string) $role;
     }
 
     /**
