@@ -23,7 +23,17 @@ class Auth
      */
     public static function role()
     {
-        return request()->header('x-role-id');
+        return request()->header('x-user-role');
+    }
+
+    /**
+     * Get role of current user.
+     *
+     * @return string|null
+     */
+    public static function email()
+    {
+        return request()->header('x-user-email');
     }
 
     /**
