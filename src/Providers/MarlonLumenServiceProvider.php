@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 use Marlon\Lumen\Console\Commands\RequestMakeCommand;
+use Marlon\Lumen\Console\Commands\ResponseMakeCommand;
 use Marlon\Lumen\Console\Commands\RunTestCommand;
 
 class MarlonLumenServiceProvider extends ServiceProvider
@@ -20,6 +21,7 @@ class MarlonLumenServiceProvider extends ServiceProvider
             $this->commands([
                 RunTestCommand::class,
                 RequestMakeCommand::class,
+                ResponseMakeCommand::class
             ]);
         }
 
