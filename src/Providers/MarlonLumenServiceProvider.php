@@ -6,6 +6,8 @@ use Marlon\Lumen\Http\FormRequest;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
+use Marlon\Lumen\Console\Commands\RequestMakeCommand;
+use Marlon\Lumen\Console\Commands\RunTestCommand;
 
 class MarlonLumenServiceProvider extends ServiceProvider
 {
@@ -14,6 +16,13 @@ class MarlonLumenServiceProvider extends ServiceProvider
     }
 
     public function boot() {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                RunTestCommand::class,
+                RequestMakeCommand::class,
+            ]);
+        }
+
         $this->app->resolving(FormRequest::class, function ($req, $app) {
             $validator = Validator::make(
                 request()->all(),

@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Http\Responses{{namespace}};
+
+use Illuminate\Contracts\Support\Responsable;
+
+class {{class}} implements Responsable
+{
+    public function toResponse($request)
+    {
+        return [];
+    }
+}
