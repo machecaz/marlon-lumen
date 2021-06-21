@@ -8,49 +8,27 @@
     $app->register(Marlon\Lumen\Providers\MarlonLumenServiceProvider::class);
     ```
 
-2. Add ErrorHandler trait to `app/Exceptions/Handler.php`:
+2. Add ErrorHandler trait to `app/Exceptions/Handler.php`.
 
-    ```php
+## Commands
 
-    namespace App\Exceptions;
+1. make:request -> Create a FormRequest.
+2. make:response -> Create a Responsable class.
+3. run:test -> A shortcut command for run test using phpunit.
 
-    use Illuminate\Auth\Access\AuthorizationException;
-    use Illuminate\Database\Eloquent\ModelNotFoundException;
-    use Illuminate\Validation\ValidationException;
-    use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
-    use Marlon\Lumen\ErrorHandler;
-    use Symfony\Component\HttpKernel\Exception\HttpException;
-    use Throwable;
+## Enums
 
-    class Handler extends ExceptionHandler
-    {
-        use ErrorHandler;
+This package use spatie/enum for enable enum feature (we are waiting for php 8.1 that will provides native enum).
 
-        /**
-        * A list of the exception types that should not be reported.
-        *
-        * @var array
-        */
-        protected $dontReport = [
-            AuthorizationException::class,
-            HttpException::class,
-            ModelNotFoundException::class,
-            ValidationException::class,
-        ];
+- RoleEnum -> user roles.
 
-        /**
-        * Report or log an exception.
-        *
-        * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
-        *
-        * @param  \Throwable  $exception
-        * @return void
-        *
-        * @throws \Exception
-        */
-        public function report(Throwable $exception)
-        {
-            parent::report($exception);
-        }
-    }
-    ```
+## Helper classes
+
+- Auth -> get values from marlon custom header (proxy will pass them).
+- ValidationErrors -> a helper class for throw a ValidationException.
+
+## Traits
+
+- ArrayObjectArrayable -> implements a recursive "objects to array" method.
+- ErrorHandler -> core class for handle ValidationException and return a 422 response with errors.
+- ObjectArrayable -> implements a recursive "object to array" method for object.
